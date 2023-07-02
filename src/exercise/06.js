@@ -48,7 +48,9 @@ function UsernameForm({onSubmitUsername}) {
         <input onChange={handleChange} type="text" ref={inputRef} />
         <p style={{color: 'red'}}>{error}</p>
       </div>
-      <button type="submit">Submit</button>
+      <button disabled={!!error} type="submit">
+        Submit
+      </button>
     </form>
   )
 }
